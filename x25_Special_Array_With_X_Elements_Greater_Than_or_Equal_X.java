@@ -1,4 +1,4 @@
-package ARRAYS.ARRAYS_easy;
+package ARRAYS_easy;
 //try w/ BS and SC = O(n)
 
 //1608

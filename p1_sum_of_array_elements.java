@@ -1,7 +1,4 @@
-package ARRAYS.ARRAYS_easy;
-
-import java.util.Scanner;
-
+package ARRAYS_easy;
 /*
 ==================
 OUESTION:) 
@@ -21,7 +18,15 @@ APPROACH 2 : while loop can be used too, with decrement in place of increment
 time complexity: O(n); where n is the size of array.
 */
 
-class solution {
+public class p1_sum_of_array_elements {
+
+ public static void main(String[] args) {
+  int[] arr = new int[] { 1, 2, 3, 4, 5 };
+  int n = arr.length;
+  System.out.println(Sum(arr, n));
+
+ }
+
  public static int Sum(int[] arr, int n) {
   int total = 0;
 
@@ -31,19 +36,4 @@ class solution {
   return (total);
  }
 
- public static void main(String[] args) {
-  Scanner input = new Scanner(System.in);
-  System.out.println("Enter length of array: ");
-  int length = input.nextInt();
-  int[] array = new int[length];
-  System.out.println("Enter elements in the array: ");
-
-  for (int i = 0; i < length; i++) {
-   array[i] = input.nextInt();
-  }
-  input.close();
-  int sol = Sum(array, length);
-  System.out.println("Sum of array elements: " + sol);
-
- }
 }

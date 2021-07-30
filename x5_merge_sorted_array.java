@@ -1,4 +1,4 @@
-package ARRAYS.ARRAYS_easy;
+package ARRAYS_easy;
 //done
 
 // different approachs (i started traversing from beginning and had to write code for sort separately)

@@ -1,4 +1,4 @@
-package ARRAYS.ARRAYS_easy;
+package ARRAYS_easy;
 //hashset and bit manipulation
 
 import java.util.*;

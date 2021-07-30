@@ -1,8 +1,4 @@
-package ARRAYS.ARRAYS_easy;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.*;
+package ARRAYS_easy;
 
 /*
 ================
@@ -20,9 +16,9 @@ Note: Left and right side elements can be equal to required element. And extreme
 ================
 APPROACH:) 
 ================
-we make two arrays of same size as the input array to store the maximum element from the left and minimum from the right
-at leftMax[0] we keep smallest value an integer can hold so that starting from left, we will have values bigger than leftMax[0]
-at rightmin[0] we keep the max value so that any value from right will be smaller than rightMin[0]
+we make two arrays of same size as the input array to store the maximum element from the left and minimum from the right of an element at index i 
+leftMax[0] = Integer.MIN_VALUE;
+rightMin[n - 1] = Integer.MAX_VALUE;
 
 we compare leftMax[i-1] and arr[i-1] to store the max value in leftMax[i] (i starts from 1)
 we compare rightMin[i+1] and arr[i+1] to store the min value in rightMin[i] (i starts from n-2)
@@ -34,6 +30,13 @@ time : O(n)
 Space : O(n)
 */
 public class p12_LHS_smaller_RHS_greater {
+
+ public static void main(String[] args) {
+  int[] arr = new int[] { 4, 3, 2, 7, 8, 9 };
+  int n = arr.length;
+
+  System.out.println(findElement(arr, n));
+ }
 
  static int findElement(int[] arr, int n) {
   // leftMax[i] stores maximum of arr[0..i-1]
@@ -59,20 +62,4 @@ public class p12_LHS_smaller_RHS_greater {
 
  }
 
- public static void main(String[] args) throws IOException {
-  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-  int t = Integer.parseInt(br.readLine().trim());
-  while (t > 0) {
-   int n = Integer.parseInt(br.readLine().trim());
-   int[] arr = new int[n];
-   String inpuLine[] = br.readLine().trim().split(" ");
-   for (int i = 0; i < n; i++) {
-    arr[i] = Integer.parseInt(inpuLine[i]);
-   }
-
-   System.out.print(findElement(arr, n));
-
-   t--;
-  }
- }
 }

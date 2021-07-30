@@ -1,6 +1,5 @@
-package ARRAYS.ARRAYS_easy;
+package ARRAYS_easy;
 
-import java.util.*;
 /*
 ==========
 PROBLEM:)
@@ -33,7 +32,14 @@ for a single element array having 1, transition point is 1 (and not -1)
 Time Complexity: O(LogN).
 Space : O(1)
 */
+
 public class p11_transition_point {
+ public static void main(String[] args) {
+  int[] arr = new int[] { 0, 0, 0, 1, 1 };
+  int n = arr.length;
+
+  System.out.println(transitionPoint(arr, n));
+ }
 
  static int transitionPoint(int arr[], int n) {
   int l = 0;
@@ -47,7 +53,7 @@ public class p11_transition_point {
 
    else {
     if (mid == 0 || (mid > 0 && arr[mid - 1] == 0)) {
-     return mid;
+     return mid; // return mid = 0 when all the elements are = 1
     }
     h = mid - 1;
    }
@@ -55,21 +61,4 @@ public class p11_transition_point {
   return -1;
  }
 
- public static void main(String[] args) {
-  Scanner s = new Scanner(System.in);
-  int t = s.nextInt();
-  while (t > 0) {
-   int n = s.nextInt();
-   int[] a = new int[n];
-
-   for (int i = 0; i < n; i++) {
-    a[i] = s.nextInt();
-   }
-
-   System.out.println(transitionPoint(a, n));
-   t--;
-  }
-
-  s.close();
- }
 }

@@ -1,4 +1,4 @@
-package ARRAYS.ARRAYS_easy;
+package ARRAYS_easy;
 
 /*
 =====================================
@@ -63,41 +63,41 @@ public int numIdenticalPairs(int[] nums) {
 
 public class x27_Number_of_good_pairs {
 
- public static int numIdenticalPairs(int[] nums) {
+    public static int numIdenticalPairs(int[] nums) {
 
-  // brute force O(n^2)
-  /*
-   * int pairs = 0; for (int i = 0; i < nums.length; i++) { for (int j = i + 1; j
-   * < nums.length; j++) { if (nums[i] == nums[j]) { pairs++; } } }
-   * 
-   * return pairs;
-   */
+        // brute force O(n^2)
+        /*
+         * int pairs = 0; for (int i = 0; i < nums.length; i++) { for (int j = i + 1; j
+         * < nums.length; j++) { if (nums[i] == nums[j]) { pairs++; } } }
+         * 
+         * return pairs;
+         */
 
-  int max = Integer.MIN_VALUE;
-  for (int n : nums) {
-   max = Math.max(max, n);
-  }
+        int max = Integer.MIN_VALUE;
+        for (int n : nums) {
+            max = Math.max(max, n);
+        }
 
-  int hashTable[] = new int[max + 1];
-  for (int i = 0; i < nums.length; i++) {
-   int index = nums[i];
-   hashTable[index]++;
-  }
+        int hashTable[] = new int[max + 1];
+        for (int i = 0; i < nums.length; i++) {
+            int index = nums[i];
+            hashTable[index]++;
+        }
 
-  int pairs = 0;
+        int pairs = 0;
 
-  for (int n : hashTable) {
-   if (n > 1) {
-    pairs += (n * (n - 1)) / 2;
-   }
-  }
-  return pairs;
+        for (int n : hashTable) {
+            if (n > 1) {
+                pairs += (n * (n - 1)) / 2;
+            }
+        }
+        return pairs;
 
- }
+    }
 
- public static void main(String[] args) {
-  int[] arr = new int[] { 1, 2, 3, 1, 1, 3 };
-  System.out.println(numIdenticalPairs(arr));
- }
+    public static void main(String[] args) {
+        int[] arr = new int[] { 1, 2, 3, 1, 1, 3 };
+        System.out.println(numIdenticalPairs(arr));
+    }
 
 }

@@ -1,4 +1,4 @@
-package ARRAYS.ARRAYS_easy;
+package ARRAYS_easy;
 
 // 0ms solution ?
 import java.util.Arrays;

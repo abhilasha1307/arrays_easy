@@ -1,18 +1,25 @@
-package ARRAYS.ARRAYS_easy;
+package ARRAYS_easy;
 
-//done
 import java.util.Scanner;
-
 /*
 =======================
 PROBLEM:) 
-======================
+=======================
 Given an array of size N consisting of only 0's and 1's. The array is sorted in such a manner that all the 1's are placed first and then they are followed by all the 0's. Find the count of all the 0's.
+
+=============================================
+EXAPMPLE:
+N = 12
+Arr[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0}
+Output: 3
+=============================================
 */
 
 /*
+=======================================================
 APPROACH: while loop used to count the no. of 0s in the provided array
 COMPLEXITY: time: O(N); Space: O(1).
+=======================================================
 */
 public class p2_count_zeros {
  public static int Count(int[] arr, int n) {
