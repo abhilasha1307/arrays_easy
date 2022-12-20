@@ -16,6 +16,7 @@ COMPLEXITY: time complexity: O(N); Space: O(1);
 APPROACH 2 : while loop can be used too, with decrement in place of increment
 ===============
 time complexity: O(n); where n is the size of array.
+asdfghjk
 */
 
 public class p1_sum_of_array_elements {
